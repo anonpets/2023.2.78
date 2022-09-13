@@ -63,9 +63,9 @@ fn main() {
 
     /// output the size of the proof, and prover's time
     // println!("{:?}", proof);
-    let path = "./data/proofsize/svc.txt";
-    let mut output = File::create(path).unwrap();
-    writeln!(output, "{:?}", proof);
+    //let path = "./data/proofsize/svc.txt";
+    //let mut output = File::create(path).unwrap();
+    //writeln!(output, "{:?}", proof);
 
     println!("Proof generated!");
     println!("Proving time:");
