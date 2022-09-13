@@ -11,7 +11,7 @@ In this documentation, we provide an instruction how to run our code as follows.
 2.  Python v3.6
     -   Create the python virtual environment
         ```
-        conda create -n [environment_name] python=3.6
+        conda create -n [environment_name] python=3.7
         ```
     -   Activate the python environment
         ```
@@ -21,11 +21,19 @@ In this documentation, we provide an instruction how to run our code as follows.
     ```
     conda install scikit-learn==1.0.2
     ```
-4.  numpy (v. 1.19.5)
+4.  numpy (v. 1.21.5)
     ```
-    conda install numpy==1.19.5
+    conda install numpy==1.21.5
     ```
-5.  Rust environment (v. 1.56.0-nightly)
+5.  pandas (v. 1.1.5)
+    ```
+    conda install pandas==1.1.5
+    ```
+6.  pywavelets (v. 1.3.0)
+    ```
+    conda install pywavelets==1.3.0
+    ```
+7.  Rust environment (v. 1.56.0-nightly)
     -   install rust
         ```
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -55,7 +63,7 @@ In this documentation, we provide an instruction how to run our code as follows.
         -    Since github only permits 100 MB maximum file size, we had to store our test samples on Google Drive. So, please download them from (https://drive.google.com/drive/folders/1vj81b2qCxCfQ1k6tmX8ImcB7YAXkA5s6?usp=sharing) 
         -   Copy the downloaded files (meta, test, train) to our CIFAR folder
             ```
-            cp meta test train CIFAR/
+            cp meta test train CIFAR/cifar-100-python/
             ```
         -   Then go to CIFAR folder 
             ``` 
