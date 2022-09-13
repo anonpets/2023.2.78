@@ -94,7 +94,7 @@ In this documentation, we provide an instruction how to run our code as follows.
 ### To Test the Proving and Verification Time of Our Scheme 
 
 
-1.  From the project root directory (i.e., XXXXX), build the rust codes
+1.  From the project root directory (i.e., 2023.2.78/src), build the rust codes
     ```
     cargo build
     ```
