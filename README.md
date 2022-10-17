@@ -83,7 +83,7 @@ In this documentation, we provide an instruction how to run our code as follows.
         
     -   For SVM only
         ```
-        python train_svm_only.py {#class} 
+        python train_svm.py {#class} 
         ```
         
     -   For ezDPS (ours)
