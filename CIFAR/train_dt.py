@@ -1,6 +1,7 @@
 from sklearn import tree
 import numpy as np
 from load_data import unpickle
+from sklearn.utils import shuffle
 from sklearn.model_selection import GridSearchCV, KFold, cross_val_score
 from sklearn.metrics import confusion_matrix, accuracy_score
 import sys
@@ -27,6 +28,33 @@ for i in range(len(train_label)):
     if train_label[i] < num_class:
         train_sub_label.append(train_label[i])
         train_sub_data.append(train_data[i])
+
+shuf_data = []
+shuf_label = []
+n_split = 5
+if num_class in {32, 64, 100}:
+    tag = 100
+elif num_class in {8, 16}:
+    tag = 200
+for i in range(n_split):
+    shuf_file_name = "shu_list/cross_"+str(num_class)+"_shu_"+str(i)+".txt"
+    shuf = np.loadtxt(shuf_file_name, dtype=int)
+    count = 0
+    for j in shuf:
+        shuf_data.append(train_sub_data[j])
+        shuf_label.append(train_sub_label[j])
+    for j in range(len(train_label)):
+        if j not in shuf:
+            print(j)
+            shuf_data.append(train_sub_data[j])
+            shuf_label.append(train_sub_label[j])
+            count += 1
+        if count >= tag:
+            break
+
+shuf_data, shuf_label = shuffle(shuf_data,shuf_label,random_state=42)
+train_sub_data = np.array(shuf_data)
+train_sub_label = np.array(shuf_label)
 
 if __name__ == '__main__':
 
