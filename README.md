@@ -86,9 +86,9 @@ In this documentation, we provide an instruction how to run our code as follows.
         python train_svm.py {#class} 
         ```
         
-    -   For ezDPS (ours)
+    -   For DWT+PCA+SVM (ours)
         ```
-        python train_ezDPS.py {#class} 
+        python train_dwt_pca_svm.py {#class} 
         ```
 
 ### To Test the Proving and Verification Time of Our Scheme 
