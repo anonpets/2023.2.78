@@ -1,6 +1,5 @@
 from time import time
 import logging
-
 from sklearn.model_selection import train_test_split, KFold, cross_val_score
 from sklearn.datasets import fetch_lfw_people
 from sklearn.metrics import confusion_matrix, accuracy_score
