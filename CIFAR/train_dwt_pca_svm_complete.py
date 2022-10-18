@@ -11,6 +11,7 @@ from sklearn.svm import SVC
 from sklearn.utils import shuffle
 import numpy as np
 
+
 train_path = 'cifar-100-python/train'
 test_path = 'cifar-100-python/test'
 train = unpickle(train_path)
