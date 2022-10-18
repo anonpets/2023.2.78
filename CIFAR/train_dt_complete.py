@@ -7,6 +7,7 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 import sys
 import random
 
+
 train_path = 'cifar-100-python/train'
 test_path = 'cifar-100-python/test'
 train = unpickle(train_path)
