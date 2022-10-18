@@ -1,5 +1,4 @@
 import sys
-
 import load_data
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.svm import SVC
